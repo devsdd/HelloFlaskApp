@@ -4,7 +4,7 @@ from flask import Flask, render_template
 
 application = Flask(__name__, template_folder=os.getcwd())
  
-@app.route("/")
+@application.route("/")
 def hello():
     return render_template("hello.html", hostname=socket.gethostname())
  
